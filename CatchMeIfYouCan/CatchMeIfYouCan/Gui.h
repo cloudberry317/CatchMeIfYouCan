@@ -19,8 +19,15 @@ class Gui {
 private:
 	static Gui gui;
 	currentPageEnum currentPage;
+	Texture texCursor;
+	Texture texLogo;
+	Texture texMole;
 public:
-	Gui() : currentPage(MainMenu) {};
+	Gui() : currentPage(MainMenu) {
+		texCursor.loadFromFile("CatchMeIfYouCan/assets/hammer.png");
+		texLogo.loadFromFile("CatchMeIfYouCan/assets/logo-removebg.png");
+		texMole.loadFromFile("CatchMeIfYouCan/assets/mole.jpg");
+	};
 	~Gui() {};
 
 	static Gui& getInstance() {

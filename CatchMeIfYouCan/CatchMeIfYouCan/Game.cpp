@@ -11,12 +11,11 @@ using namespace sf;
 Game Game::game;
 
 void Game::GameLoop() {
-	Game& game = Game::getInstance();
 	Gui& gui = Gui::getInstance();
-	currentPageEnum currentPage;
+	currentPageEnum& currentPage = gui.getCurrentPage();
 
 	// Create a window
-	RenderWindow window(VideoMode({800, 700}), "Catch Me If You Can");
+	RenderWindow window(VideoMode({1200, 800}), "Catch Me If You Can");
 	window.setFramerateLimit(60);
 
 	// Initialize ImGui-SFML
