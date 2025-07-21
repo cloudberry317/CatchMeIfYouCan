@@ -22,11 +22,16 @@ private:
 	Texture texCursor;
 	Texture texLogo;
 	Texture texMole;
+	Texture texHole;
+	Clock moleTimer;
+	int currentMolePosition = 0; // 當前地鼠位置 (0表示沒有地鼠)
+	int lastMolePosition = 0;
 public:
 	Gui() : currentPage(MainMenu) {
 		texCursor.loadFromFile("CatchMeIfYouCan/assets/hammer.png");
 		texLogo.loadFromFile("CatchMeIfYouCan/assets/logo-removebg.png");
 		texMole.loadFromFile("CatchMeIfYouCan/assets/mole.jpg");
+		texHole.loadFromFile("CatchMeIfYouCan/assets/hole.jpg");
 	};
 	~Gui() {};
 

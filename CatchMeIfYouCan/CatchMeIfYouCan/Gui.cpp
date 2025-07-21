@@ -36,15 +36,43 @@ void Gui::MainMenuPage(RenderWindow& window, ImFont* buttonFont) {
 	ImGui::SetCursorPos(ImVec2(center.x - 375, center.y - 330));
 	ImGui::Image(imgLogo, ImVec2(750, 90));
 
-	ImTextureID imgMole = texMole.getNativeHandle();
+	//Random mole design
+	ImTextureID imgHole = texHole.getNativeHandle();
 	ImGui::SetCursorPos(ImVec2(center.x - 560, center.y - 390));
-	ImGui::Image(imgMole, ImVec2(150, 100));
+	ImGui::Image(imgHole, ImVec2(150, 100));
 	ImGui::SetCursorPos(ImVec2(center.x + 430, center.y - 390));
-	ImGui::Image(imgMole, ImVec2(150, 100));
+	ImGui::Image(imgHole, ImVec2(150, 100));
 	ImGui::SetCursorPos(ImVec2(center.x + 430, center.y + 270));
-	ImGui::Image(imgMole, ImVec2(150, 100));
+	ImGui::Image(imgHole, ImVec2(150, 100));
 	ImGui::SetCursorPos(ImVec2(center.x - 560, center.y + 270));
-	ImGui::Image(imgMole, ImVec2(150, 100));
+	ImGui::Image(imgHole, ImVec2(150, 100));
+
+	if (moleTimer.getElapsedTime().asSeconds() >= 1.5f) {
+		do {
+			currentMolePosition = rand() % 4 + 1;
+		} while (currentMolePosition == lastMolePosition);
+
+		lastMolePosition = currentMolePosition;
+		moleTimer.restart();
+	}
+	if (currentMolePosition > 0) {
+		ImTextureID imgMole = texMole.getNativeHandle();
+		switch (currentMolePosition) {
+		case 1:
+			ImGui::SetCursorPos(ImVec2(center.x - 560, center.y - 390));
+			break;
+		case 2:
+			ImGui::SetCursorPos(ImVec2(center.x + 430, center.y - 390));
+			break;
+		case 3:
+			ImGui::SetCursorPos(ImVec2(center.x + 430, center.y + 270));
+			break;
+		case 4:
+			ImGui::SetCursorPos(ImVec2(center.x - 560, center.y + 270));
+			break;
+		}
+		ImGui::Image(imgMole, ImVec2(150, 100));
+	}
 	
 	//The Design of MainMenu 
 	ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.7f, 0.85f, 1.0f, 0.8f));
@@ -84,8 +112,8 @@ void Gui::MainMenuPage(RenderWindow& window, ImFont* buttonFont) {
 
 	ImGui::End();
 	ImGui::Render();
-	window.draw(cursor);
 	ImGui::SFML::Render(window);
+	window.draw(cursor);
 	window.display();
 }
 
@@ -111,8 +139,8 @@ void Gui::EasyModePage(RenderWindow& window) {
 
 	ImGui::End();
 	ImGui::Render();
-	window.draw(cursor);
 	ImGui::SFML::Render(window);
+	window.draw(cursor);
 	window.display();
 };
 
