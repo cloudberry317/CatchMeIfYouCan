@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -74,7 +74,7 @@
     <IncludePath>C:\Github\CatchMeIfYouCan\external\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Github\CatchMeIfYouCan\external\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Github\CatchMeIfYouCan\CatchMeIfYouCan\imgui-sfml-3.0\imgui-sfml-3.0;C:\Github\CatchMeIfYouCan\CatchMeIfYouCan\imgui-1.91.9b\imgui-1.91.9b;C:\Github\CatchMeIfYouCan\CatchMeIfYouCan\imgui-1.91.9b;C:\Github\CatchMeIfYouCan\CatchMeIfYouCan\json;C:\Github\CatchMeIfYouCan\external\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Github\CatchMeIfYouCan\external\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -83,7 +83,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Github\CatchMeIfYouCan\external\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Github\CatchMeIfYouCan\CatchMeIfYouCan\json;C:\Github\CatchMeIfYouCan\external\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -139,7 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CatchMeIfYouCan\Game.cpp" />
+    <ClCompile Include="CatchMeIfYouCan\Gui.cpp" />
+    <ClCompile Include="CatchMeIfYouCan\imgui-SFML.cpp" />
+    <ClCompile Include="CatchMeIfYouCan\imgui.cpp" />
+    <ClCompile Include="CatchMeIfYouCan\imgui_draw.cpp" />
+    <ClCompile Include="CatchMeIfYouCan\imgui_tables.cpp" />
+    <ClCompile Include="CatchMeIfYouCan\imgui_widgets.cpp" />
     <ClCompile Include="CatchMeIfYouCan\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CatchMeIfYouCan\Game.h" />
+    <ClInclude Include="CatchMeIfYouCan\Gui.h" />
+    <ClInclude Include="CatchMeIfYouCan\Mole.h" />
+    <ClInclude Include="CatchMeIfYouCan\Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
