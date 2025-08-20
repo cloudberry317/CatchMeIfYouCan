@@ -1,0 +1,29 @@
+{
+  "Easy": {
+    "holeCount": 5,
+    "maxVisibleMoles": 2,
+    "moleAppearInterval": 0.8,
+    "moleVisibleDuration": 1.5,
+    "intervalIncrement": 0.1,
+    "maxInterval": 0.6,
+    "totalGameTime": 60.0
+  },
+  "Medium": {
+    "holeCount": 5,
+    "maxVisibleMoles": 2,
+    "moleAppearInterval": 1.4,
+    "moleVisibleDuration": 1.8,
+    "intervalIncrement": 0.2,
+    "maxInterval": 1.0,
+    "totalGameTime": 20.0
+  },
+  "Hard": {
+    "holeCount": 5,
+    "maxVisibleMoles": 2,
+    "moleAppearInterval": 1.0,
+    "moleVisibleDuration": 1.0,
+    "intervalIncrement": 0.2,
+    "maxInterval": 2.5,
+    "totalGameTime": 20
+  }
+}

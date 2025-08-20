@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CatchMeIfYouCan\Game.cpp" />
+    <ClCompile Include="CatchMeIfYouCan\GameConfig.cpp" />
     <ClCompile Include="CatchMeIfYouCan\Gui.cpp" />
     <ClCompile Include="CatchMeIfYouCan\imgui-SFML.cpp" />
     <ClCompile Include="CatchMeIfYouCan\imgui.cpp" />
@@ -147,12 +148,18 @@
     <ClCompile Include="CatchMeIfYouCan\imgui_tables.cpp" />
     <ClCompile Include="CatchMeIfYouCan\imgui_widgets.cpp" />
     <ClCompile Include="CatchMeIfYouCan\main.cpp" />
+    <ClCompile Include="CatchMeIfYouCan\Mole.cpp" />
+    <ClCompile Include="CatchMeIfYouCan\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CatchMeIfYouCan\Game.h" />
+    <ClInclude Include="CatchMeIfYouCan\GameConfig.h" />
     <ClInclude Include="CatchMeIfYouCan\Gui.h" />
     <ClInclude Include="CatchMeIfYouCan\Mole.h" />
     <ClInclude Include="CatchMeIfYouCan\Player.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CatchMeIfYouCan\config.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

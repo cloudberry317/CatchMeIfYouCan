@@ -1,6 +1,6 @@
 #include "Game.h"
 
 int main() {
-	Game::getInstance().GameLoop();
+	Game::getInstance().MainLoop();
 	return 0;
 }

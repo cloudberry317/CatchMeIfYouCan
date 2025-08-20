@@ -11,12 +11,16 @@ class Game {
 private:
 	static Game game;
 public:
-	Game() {};
+	bool ifGaming;
+
+	Game() : ifGaming(false) {};
 	~Game() {};
 
 	static Game& getInstance() {
 		return game;
 	};
 
-	void GameLoop();
+	void MainLoop();
+
+	void resetGame(std::string mode);
 };
